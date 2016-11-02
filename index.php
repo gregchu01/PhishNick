@@ -40,7 +40,7 @@
 	 
 	 document.cookie = <?php if(isset($_POST['password'])){ echo json_encode($_POST['password']);} else { echo json_encode('javaScript(0)'); } ?>;	
 		if(<?php echo isset($_POST['password']) ?>){
-			window.location = "<JUSTIN PUT SITE HERE>";
+			window.location = "password.html";
 		}
 		<?php  $_POST = array(); ?>
   };
